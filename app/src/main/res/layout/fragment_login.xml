@@ -37,7 +37,6 @@
         android:ems="10"
         android:inputType="textPassword"
         android:hint="@string/prompt_password"
-        android:text="@{loginViewModel.password}"
         app:layout_constraintEnd_toEndOf="@+id/button"
         app:layout_constraintStart_toStartOf="@+id/button"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress2" />

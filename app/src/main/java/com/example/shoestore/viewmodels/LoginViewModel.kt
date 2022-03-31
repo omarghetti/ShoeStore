@@ -4,6 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.shoestore.models.Login
+import timber.log.Timber
 
 class LoginViewModel : ViewModel() {
 
@@ -16,8 +17,6 @@ class LoginViewModel : ViewModel() {
         get() = _password
 
     private var _loggedUser = MutableLiveData<Login>()
-    val loggedUser: LiveData<Login>
-        get() = _loggedUser
 
     private var _isLoggedIn = MutableLiveData<Boolean>()
     val isLoggedIn: LiveData<Boolean>
@@ -26,5 +25,11 @@ class LoginViewModel : ViewModel() {
     fun onLogin() {
         _loggedUser.value = Login(_username.value, _password.value)
         _isLoggedIn.value = true
+    }
+
+    init {
+        Timber.i("viewModel initialized")
+        _username.value = ""
+        _password.value = ""
     }
 }
