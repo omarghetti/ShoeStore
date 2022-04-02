@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="shoeListViewModel"
+            type="com.example.shoestore.viewmodels.ShoeListViewModel" />
+    </data>
+
+    <ScrollView
+        android:id="@+id/shoeListFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="ui.ShoeListFragment"
+        android:fillViewport="true">
+
+
+        <LinearLayout
+            android:id="@+id/shoe_list_linear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/floatingActionButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"
+                android:clickable="true"
+                android:contentDescription="@string/floating_action_content_description" />
+        </LinearLayout>
+    </ScrollView>
+</layout>

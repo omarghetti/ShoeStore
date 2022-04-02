@@ -15,7 +15,7 @@
     android:layout_height="match_parent"
     tools:context="ui.LoginFragment">
 
-    <EditText
+    <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/editTextTextEmailAddress2"
         android:layout_width="319dp"
         android:layout_height="51dp"
@@ -23,13 +23,12 @@
         android:ems="10"
         android:inputType="textEmailAddress"
         android:hint="@string/prompt_email"
-        android:text ="@{loginViewModel.username}"
         app:layout_constraintEnd_toEndOf="@+id/editTextStringPassword"
         app:layout_constraintHorizontal_bias="0.521"
         app:layout_constraintStart_toStartOf="@+id/editTextStringPassword"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
+    <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/editTextStringPassword"
         android:layout_width="316dp"
         android:layout_height="58dp"
@@ -47,7 +46,6 @@
         android:layout_height="54dp"
         android:layout_marginTop="24dp"
         android:text="@string/action_sign_in"
-        android:onClick="@{() -> loginViewModel.onLogin()}"
         app:layout_constraintEnd_toEndOf="@+id/button2"
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="@+id/button2"
@@ -59,7 +57,6 @@
         android:layout_height="56dp"
         android:layout_marginTop="8dp"
         android:text="@string/action_sign_in_short"
-        android:onClick="@{() -> loginViewModel.onLogin()}"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"

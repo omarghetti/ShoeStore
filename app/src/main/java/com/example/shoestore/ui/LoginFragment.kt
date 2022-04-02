@@ -37,13 +37,20 @@ class LoginFragment : Fragment() {
                 login()
             }
         })
+
+        binding.button.setOnClickListener { submitForm(binding.editTextTextEmailAddress2.text.toString(), binding.editTextStringPassword.text.toString()) }
+        binding.button2.setOnClickListener { submitForm(binding.editTextTextEmailAddress2.text.toString(), binding.editTextStringPassword.text.toString()) }
         return binding.root
     }
 
     private fun login() {
+        Toast.makeText(context, "Hello ${loginViewModel.loggedUser.value?.userName}", Toast.LENGTH_SHORT).show()
         val loginAction = LoginFragmentDirections.actionLoginFragment2ToWelcomeFragment()
         this.findNavController().navigate(loginAction)
-        Toast.makeText(context, "Hello ${loginViewModel.username.value}", Toast.LENGTH_LONG).show()
+    }
+
+    private fun submitForm(user: String, pass: String) {
+            loginViewModel.onLogin(user, pass)
     }
 
 }

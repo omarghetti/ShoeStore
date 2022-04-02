@@ -16,4 +16,6 @@
     <string name="shoe_store_welcome">Welcome To ShoeStore!</string>
     <string name="user_guide">User Guide</string>
     <string name="user_guide_text">This Application is going to enable the user to look through different types of shoes</string>
+    <string name="floating_action_content_description">Add New Shoe</string>
+    <string name="logout">Logout</string>
 </resources>
