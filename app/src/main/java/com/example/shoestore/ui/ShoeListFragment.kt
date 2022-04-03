@@ -11,6 +11,7 @@ import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.NavigationUI
 import com.example.shoestore.R
 import com.example.shoestore.databinding.FragmentShoeListBinding
@@ -40,6 +41,11 @@ class ShoeListFragment : Fragment() {
                 binding.shoeListLinear.addView(textView,index)
             }
         })
+
+        binding.floatingActionButton.setOnClickListener {
+            val shoeDetailAction = ShoeListFragmentDirections.actionShoeListFragmentToShoeDetailsFragment()
+            this.findNavController().navigate(shoeDetailAction)
+        }
         return binding.root
     }
 
