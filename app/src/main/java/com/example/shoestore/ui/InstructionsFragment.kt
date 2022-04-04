@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.navigation.fragment.findNavController
 import com.example.shoestore.R
 import com.example.shoestore.databinding.FragmentInstructionsBinding
 
@@ -18,6 +19,11 @@ class InstructionsFragment : Fragment() {
     ): View {
         // Inflate the layout for this fragment
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_instructions, container, false)
+
+        binding.button4.setOnClickListener {
+            val shoeListAction = InstructionsFragmentDirections.actionInstructionsFragmentToShoeListFragment()
+            this.findNavController().navigate(shoeListAction)
+        }
 
         return binding.root
     }
