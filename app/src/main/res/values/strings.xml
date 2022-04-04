@@ -18,4 +18,14 @@
     <string name="user_guide_text">This Application is going to enable the user to look through different types of shoes</string>
     <string name="floating_action_content_description">Add New Shoe</string>
     <string name="logout">Logout</string>
+    <string name="save_action">Save</string>
+    <string name="label_name">Shoe Name</string>
+    <string name="label_company">Shoe Company</string>
+    <string name="label_size">Shoe Size</string>
+    <string name="label_desc">Shoe Description</string>
+    <string name="hint_name">e.g Air Max</string>
+    <string name="hint_company">e.g Nike</string>
+    <string name="hint_size">e.g 10.5</string>
+    <string name="hint_desc">e.g bla bla</string>
+    <string name="extended_fab_label">New Shoe</string>
 </resources>

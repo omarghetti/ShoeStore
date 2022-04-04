@@ -20,7 +20,7 @@ class InstructionsFragment : Fragment() {
         // Inflate the layout for this fragment
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_instructions, container, false)
 
-        binding.button4.setOnClickListener {
+        binding.ButtonToStore.setOnClickListener {
             val shoeListAction = InstructionsFragmentDirections.actionInstructionsFragmentToShoeListFragment()
             this.findNavController().navigate(shoeListAction)
         }

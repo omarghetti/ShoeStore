@@ -26,14 +26,16 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"/>
         </ScrollView>
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
             android:id="@+id/floatingActionButton"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_alignParentEnd="true"
             android:clickable="true"
             android:layout_margin="16dp"
+            android:text="@string/extended_fab_label"
+            app:icon="@drawable/ic_baseline_add_24"
             android:contentDescription="@string/floating_action_content_description" />
     </RelativeLayout>
 

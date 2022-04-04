@@ -37,21 +37,21 @@ class ShoeListFragment : Fragment() {
         shoeListViewModel.shoeList.observe(viewLifecycleOwner, Observer { shoeList ->
             shoeList.forEachIndexed { index,shoe ->
                 val textView = TextView(context)
-                textView.setText("${shoe.name}, Size: ${shoe.size}, Description: ${shoe.description}")
+                textView.text = "${shoe.name}, Size: ${shoe.size}, Description: ${shoe.description}"
                 binding.shoeListLinear.addView(textView,index)
             }
         })
-
+        setHasOptionsMenu(true)
         binding.floatingActionButton.setOnClickListener {
             val shoeDetailAction = ShoeListFragmentDirections.actionShoeListFragmentToShoeDetailsFragment()
-            this.findNavController().navigate(shoeDetailAction)
+            it.findNavController().navigate(shoeDetailAction)
         }
         return binding.root
     }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
-        super.onCreateOptionsMenu(menu, inflater)
         inflater.inflate(R.menu.logout_menu, menu)
+        super.onCreateOptionsMenu(menu, inflater)
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
